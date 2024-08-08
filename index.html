@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master's Degree Web App | Drexel</title>
+    <link rel="shortcut icon" href="./public/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./public/css/final.css">
+    <script src="https://kit.fontawesome.com/9cb3b533ec.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body onload="onload()">
+    <!-- Loading page -->
+    <!-- <div class="loading" id="loadpage"><img src="./public/img/Drexel-logo.png" alt="Logo"></div> -->
+    <div id="loadpage">
+        <img src="./public/img/Drexel-logo.png" alt="Logo">
+        <div class="loading_bar">
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show position-absolute" role="alert">
+    <strong>{{ message.tags }}</strong>{{ message }}
+    </div>
+    {% endfor %}
+    {% endif %} -->
+
+    <!-- Dark Mode -->
+    <div id="darkme">
+        <input type="checkbox" name="" id="darkmode">
+    </div>
+
+
+
+
+    <!-- Home page -->
+    <section id="body1">
+
+        <div id="hamburger">
+            <img src="./public/img/dragon.png" alt="" id="dragon">
+            <img src="./public/img/D.png" id="D" alt="">
+        </div>
+        <div id="menu">
+            <div class="linkdiv">
+                <a href="https://drexel.edu/cci/" target="_blank" rel="noopener noreferrer" class="links ccilogo"><img
+                        src="./public/img/fulldrexellogo.png" alt=""></a>
+                <a href="http://drexel.edu" target="_blank" rel="noopener noreferrer" class="links">University
+                    Website</a>
+                <a href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/" target="_blank"
+                    rel="noopener noreferrer" class="links">CCI Catalog</a>
+                <a href="http://catalog.drexel.edu/certificates/" target="_blank" rel="noopener noreferrer"
+                    class="links">Certificate Programs</a>
+                <a href="http://catalog.drexel.edu/" target="_blank" rel="noopener noreferrer" class="links">2020-2021
+                    Drexel Catalog</a>
+            </div>
+        </div>
+        <div id="blurscreen"></div>
+        <div class="mainheading">
+            <h2 id="text" data-text="Master's Degree" data-html="WebApp">Master's Degree<br>Finder</h2>
+            <button type="button" class="btn btn-success" id="start">Start</button>
+        </div>
+
+        <div id="rightsheety">
+            <a href="https://drexel.edu/" target="_blank">
+                Drexel<br>
+                <h4>University</h4>
+            </a>
+            <a href="https://drexel.edu/ambitioncantwait/" target="_blank" rel="noopener noreferrer" id="abanner">
+                <div id="banner">
+                    <h6>Ambition<br>can't<br>wait</h6>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+    <section id="body2">
+        <div id="bg">
+            <h1 class="center" id="heading">Pick Two or Three Certificates to find your preferred Master's Degree</h1>
+            <h2 class="center"></h2>
+
+        </div>
+
+        <form id="form">
+            <div class="container" id="big_box">
+
+                <div id="certi_carousel">
+                    <i class="fa fa-angle-left" id="goleft"></i>
+                    <ul id="certi_ul">
+                        <li class="certi_li">HCI/UX</li>
+                        <li class="certi_li">Information Systems</li>
+                        <li class="certi_li">Foundations of Data Science</li>
+                        <li class="certi_li">Artificial Intelligence/Machine Learning</li>
+                        <li class="certi_li">Technology Leadership</li>
+                        <li class="certi_li">Cybersecurity</li>
+                        <li class="certi_li">Computer Science Foundations</li>
+                        <li class="certi_li">Advanced Computer Science</li>
+                        <li class="certi_li">Software Architecture</li>
+                        <li class="certi_li">Front-End Development</li>
+                        <li class="certi_li">Health Informatics</li>
+                        <li class="certi_li">Community-based Librarianship</li>
+                        <li class="certi_li">Applied Data Science</li>
+                        <li class="certi_li">App Development</li>
+                    </ul>
+                    <i class="fa fa-angle-right" id="goright"></i>
+                </div>
+
+                <div class="but_container">
+
+                    <div class="subdiv" name="HCI/UX" id="1">
+                        <label>
+                            <div class="buttons">
+                                <input type="checkbox" name="checkbox">
+                                <img src="./public/img/hciux.jpeg" alt="HCI/UX Image">
+                                <h3>HCI/UX</h3>
+                                </input>
+                            </div>
+                        </label>
+
+                        <div class="button_info">
+                            <div class="firstsection">Description</div>
+                            <div class="section1"></div>
+                            <button type="button" class="btn btn-lg secondsection" data-toggle="popover"
+                                title="Preffered Combinations (HCI/UX)" data-trigger="focus" data-content='<button type = "button" class = "buttonforcomb" onclick="combine.apply(null, [`HCI/UX`,`Front-End Development`])" >
+                                <div class="smallboxinbutton">HCI/UX</div>
+                                <h6>&nbsp; + &nbsp;</h6>
+                                <div class="smallboxinbutton">Front-End Development</div>                                
+                            </button>' data-html="true" data-placement="bottom">Combinations</button>
+                        </div>
+
+                        <div class="description">
+                            <span class="cross">&#10006;</span>
+                            <h7>
+                                The post-baccalaureate certificate in Human-Computer Interaction and User Experience
+                                (HCI/UX) provides foundations and practical skills for professionals who want to design
+                                and evaluate a wide variety of user experiences and computer interfaces. For more <a
+                                    href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/humancomputerinteractionanduserexperiencepbc/"
+                                    target="_blank" rel="noopener noreferrer">Information</a>
+                            </h7>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="subdiv" name="Information Systems" id="2">
+                        <label>
+                            <div class="buttons">
+                                <input type="checkbox" name="checkbox">
+                                <img src="https://source.unsplash.com/400x300/weekly?Information-Systems
+                                " alt="Information Systems">
+                                <h3>Information Systems</h3>
+
+                                </input>
+                            </div>
+
+                        </label>
+                        <div class="button_info">
+                            <div class="firstsection">Description</div>
+                            <div class="section1"></div>
+                            <button type="button" class="btn btn-lg secondsection" data-toggle="popover"
+                                title="Preffered Combinations (Information Systems)" data-trigger="focus" data-content='<button type = "button" class = "buttonforcomb" onclick="combine.apply(null, [`Information Systems`,`Cybersecurity`,`Software Architecture`])" >
+                                <div class="smallboxinbutton">Information Systems</div>
+                                <h6>&nbsp; + &nbsp;</h6>
+                                <div class="smallboxinbutton">Cybersecurity</div>
+                                <h6>&nbsp; + &nbsp;</h6>
+                                <div class="smallboxinbutton">Software Architecture</div>
+                            </button>' data-html="true" data-placement="bottom">Combinations</button>
+                        </div>
+
+                        <div class="description">
+                            <span class="cross">&#10006;</span>
+                            <h7>
+                                This certificate provides specialized training beyond the master's degree so that
+                                practitioners can update and extend their skills and knowledge by adding
+                                position-relevant coursework in order to meet their current employment requirements. For
+                                more <a
+                                    href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/informationstudiesandtechcert/"
+                                    target="_blank" rel="noopener noreferrer">Information</a>
+                            </h7>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subdiv" name="Foundations of Data Science" id="3">
+                        <label>
+                            <div class="buttons"><input type="checkbox" name="checkbox">
+                                <img src="https://source.unsplash.com/400x300/weekly?Machine
+                                " alt="Foundations of Data Science">
+                                <h3>Foundations of Data Science</h3>
+                                </input>
+                            </div>
+                        </label>
+                        <div class="button_info">
+                            <div class="firstsection">Description</div>
+                            <div class="section1"></div>
+                            <button type="button" class="btn btn-lg secondsection" data-toggle="popover"
+                                title="Preffered Combinations (Foundations of Data Science)" data-trigger="focus"
+                                data-content='<button type = "button" class = "buttonforcomb" onclick="combine.apply(null, [`Foundations of Data Science`,`Artificial Intelligence/Machine Learning`,`Advanced Computer Science`])" >
+                                <div class="smallboxinbutton">Foundations of Data Science</div>
+                                <h6>&nbsp; + &nbsp;</h6>
+                                <div class="smallboxinbutton">AI & ML</div>
+                                <h6>&nbsp; + &nbsp;</h6>
+                                <div class="smallboxinbutton">Advanced Computer Science</div>
+                            </button>' data-html="true" data-placement="bottom">Combinations</button>
+                        </div>
+                        <div class="description">
+                            <span class="cross">&#10006;</span>
+                            <h7>
+                                This certificate addresses organizing practices and knowledge, and implications for
+                                back-end system functionality, and front-end user access. Addresses existing and
+                                emerging data standards and tools applicable to data and information. For more <a
+                                    href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/applieddatasciencepbc/index.html"
+                                    target="_blank" rel="noopener noreferrer">Information</a>
+                            </h7>
+
+                        </div>
+                    </div>
+
+
+                    <div class="subdiv" name="Artificial Intelligence/Machine Learning" id="4">
+                        <label>
+                            <div class="buttons"><input type="checkbox" name="checkbox">
+                                <img src="https://source.unsplash.com/400x300/weekly?Robotics
+                                " alt="Artificial Intelligence/Machine Learning">
+                                <h3>AI & ML</h3>
+                                </input>
+                            </div>
+                        </label>
+                        <div class="button_info">
+                            <div class="firstsection">Description</div>
+                            <div class="section1"></div>
+                            <button type="button" class="btn btn-lg secondsection" data-toggle="popover"
+                                title="Preffered Combinations (AI & ML)" data-trigger="focus" data-content='<button type = "button" class = "buttonforcomb" onclick="combine.apply(null, [`Artificial Intelligence/Machine Learning`,`Foundations of Data Science`,`Advanced Computer Science`])" >
+                                <div class="smallboxinbutton">AI & ML</div>
+                                <h6>&nbsp; + &nbsp;</h6>
+                                <div class="smallboxinbutton">Foundations of Data Science</div>
+                                <h6>&nbsp; + &nbsp;</h6>
+                                <div class="smallboxinbutton">Advanced Computer Science</div>
+                            </button>' data-html="true" data-placement="bottom">Combinations</button>
+                        </div>
+                        <div class="description">
+                            <span class="cross">&#10006;</span>
+                            <h7>
+                                Certificate in Artificial Intelligence and Machine Learning accepts applicants who hold
+                                Bachelor degrees in Computer Science, or completed a Post-Baccalaureate Certificate in
+                                Computer Science, and offers them opportunities to learn the fundamentals of AI & ML.
+                                For more <a
+                                    href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/artificialintelligenceandmachinelearningpbc/index.html"
+                                    target="_blank" rel="noopener noreferrer">Information</a>
+                            </h7>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="subdiv" name="Technology Leadership" id="5">
+                        <label>
+                            <div class="buttons"><input type="checkbox" name="checkbox">
+                                <img src="https://source.unsplash.com/400x300/weekly?Technology
+                                " alt="Technology Leadership">
+                                <h3>Technology Leadership</h3>
+                                </input>
+                            </div>
+                        </label>
+                        <div class="button_info">
+                            <div class="firstsection">Description</div>
+                            <div class="section1"></div>
+                            <button type="button" class="btn btn-lg secondsection" data-toggle="popover"
+                                title="Preffered Combinations (Technology Leadership)" data-trigger="focus"
+                                data-content='<button type = "button" class = "buttonforcomb" onclick="combine.apply(null, [`Technology Leadership`,`Cybersecurity`])" >
+                                <div class="smallboxinbutton">Technology Leadership</div>
+                                <h6>&nbsp; + &nbsp;</h6>
+                                <div class="smallboxinbutton">Cybersecurity</div>
+                            </button>' data-html="true" data-placement="bottom">Combinations</button>
+                        </div>
+                        <div class="description">
+                            <span class="cross">&#10006;</span>
+                            <h7>
+                                Technological leadership is defined as the study and ethical practice of facilitating
+                                learning and improving performance by creating, using, and managing appropriate
+                                technological processes and resources. For more <a
+                                    href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/informationsystems/"
+                                    target="_blank" rel="noopener noreferrer">Information</a>
+                            </h7>
+
+                        </div>
+                    </div>
+
+
+                    <div class="subdiv" name="Cybersecurity" id="6">
+                        <label>
+                            <div class="buttons"><input type="checkbox" name="checkbox">
+                                <img src="https://source.unsplash.com/400x300/weekly?Cybersecurity
+                                " alt="Cybersecurity">
+                                <h3>Cybersecurity</h3>
+                                </input>
+                            </div>
+                        </label>
+                        <div class="button_info">
+                            <div class="firstsection">Description</div>
+                            <div class="section1"></div>
+                            <button type="button" class="btn btn-lg secondsection" data-toggle="popover"
+                                title="Preffered Combinations (Cybersecurity)" data-trigger="focus" data-content='<button type = "button" class = "buttonforcomb" onclick="combine.apply(null, [`Cybersecurity`,`Information Systems`])" >
+                                <div class="smallboxinbutton">Cybersecurity</div>
+                                <h6>&nbsp; + &nbsp;</h6>
+                                <div class="smallboxinbutton">Information Systems</div>
+                            </button>' data-html="true" data-placement="bottom">Combinations</button>
+                        </div>
+                        <div class="description">
+                            <span class="cross">&#10006;</span>
+                            <h7>
+                                Cybersecurity program provides deeply technical and specialized training and enables
+                                graduates to understand, adapt, and develop new techniques to confront emerging threats
+                                in cybersecurity. For more <a
+                                    href="http://catalog.drexel.edu/graduate/collegeofengineering/cybersecurity/"
+                                    target="_blank" rel="noopener noreferrer">Information</a>
+                            </h7>
+
+                        </div>
+                    </div>
+
+
+                    <div class="subdiv" name="Computer Science Foundations" id="7">
+                        <label>
+                            <div class="buttons"><input type="checkbox" name="checkbox">
+                                <img src="https://source.unsplash.com/400x300/weekly?ComputerScience
+                                " alt="Computer Science Foundations">
+                                <h3 class="smallerh3">Computer Science Foundations</h3>
+                                </input>
+                            </div>
+                        </label>
+                        <div class="button_info">
+                            <div class="firstsection">Description</div>
+                            <div class="section1"></div>
+                            <button type="button" class="btn btn-lg secondsection" data-toggle="popover"
+                                title="Preffered Combinations (Computer Science Foundations)" data-trigger="focus"
+                                data-content='<button type = "button" class = "buttonforcomb" onclick="combine.apply(null, [`Computer Science Foundations`,`Advanced Computer Science`])" >
+                                <div class="smallboxinbutton">Computer Science Foundations</div>
+                                <h6>&nbsp; + &nbsp;</h6>
+                                <div class="smallboxinbutton">Advanced Computer Science</div>
+                            </button>' data-html="true" data-placement="bottom">Combinations</button>
+                        </div>
+                        <div class="description">
+                            <span class="cross">&#10006;</span>
+                            <h7>
+                                The post-baccalaureate certificate program in Computer Science accepts applicants who
+                                hold bachelor's degrees in areas other than computer science. The program is designed to
+                                provide an accelerated five-course introduction to computer science. For more <a
+                                    href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/computersciencecert/"
+                                    target="_blank" rel="noopener noreferrer">Information</a>
+                            </h7>
+
+                        </div>
+                    </div>
+
+                    <div class="subdiv" name="Advanced Computer Science" id="8">
+                        <label>
+                            <div class="buttons"><input type="checkbox" name="checkbox">
+                                <img src="https://source.unsplash.com/400x300/weekly?Advanced Computer Science
+                                " alt="Advanced Computer Science">
+                                <h3 class="smallerh3">Advanced Computer Science</h3>
+                                </input>
+                            </div>
+                        </label>
+                        <div class="button_info">
+                            <div class="firstsection">Description</div>
+                            <div class="section1"></div>
+                            <button type="button" class="btn btn-lg secondsection" data-toggle="popover"
+                                title="Preffered Combinations (Advanced Computer Science)" data-trigger="focus"
+                                data-content='<button type = "button" class = "buttonforcomb" onclick="combine.apply(null, [`Advanced Computer Science`,`Computer Science Foundations`])" >
+                                <div class="smallboxinbutton">Advanced Computer Science</div>
+                                <h6>&nbsp; + &nbsp;</h6>
+                                <div class="smallboxinbutton">Computer Science Foundations</div>
+                            </button>' data-html="true" data-placement="bottom">Combinations</button>
+                        </div>
+                        <div class="description">
+                            <span class="cross">&#10006;</span>
+                            <h7>
+                                This non-degree program provides specialized training beyond the master's degree so that
+                                practitioners can update and extend their skills and knowledge by adding
+                                position-relevant coursework in order to meet their current employment requirements. For
+                                more <a
+                                    href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/informationstudiesandtechcert/"
+                                    target="_blank" rel="noopener noreferrer">Information</a>
+                            </h7>
+
+                        </div>
+                    </div>
+
+                    <div class="subdiv" name="Software Architecture" id="9">
+                        <label>
+                            <div class="buttons"><input type="checkbox" name="checkbox">
+                                <img src="https://source.unsplash.com/400x300/weekly?computer-system
+                                " alt="Software Architecture">
+                                <h3>Software Architecture</h3>
+                                </input>
+                            </div>
+                        </label>
+                        <div class="button_info">
+                            <div class="firstsection">Description</div>
+                            <div class="section1"></div>
+                            <button type="button" class="btn btn-lg secondsection" data-toggle="popover"
+                                title="Preffered Combinations (Software Architecture)" data-trigger="focus"
+                                data-content='<button type = "button" class = "buttonforcomb" onclick="combine.apply(null, [`Software Architecture`,`Computer Science Foundations`,`Advanced Computer Science`])" >
+                                <div class="smallboxinbutton">Software Architecture</div>
+                                <h6>&nbsp; + &nbsp;</h6>
+                                <div class="smallboxinbutton">Computer Science Foundations</div>
+                                <h6>&nbsp; + &nbsp;</h6>
+                                <div class="smallboxinbutton">Advanced Computer Science</div>
+                            </button>' data-html="true" data-placement="bottom">Combinations</button>
+                        </div>
+                        <div class="description">
+                            <span class="cross">&#10006;</span>
+                            <h7>
+                                Software architecture refers to the fundamental structures of a software system and the
+                                discipline of creating such structures and systems. For more <a
+                                    href="http://catalog.drexel.edu/undergraduate/collegeofcomputingandinformatics/softwareengineering/"
+                                    target="_blank" rel="noopener noreferrer">Information</a>
+                            </h7>
+
+                        </div>
+                    </div>
+
+
+                    <div class="subdiv" name="Front-End Development" id="10">
+                        <label>
+                            <div class="buttons"><input type="checkbox" name="checkbox">
+                                <img src="https://source.unsplash.com/400x300/weekly?Developer
+                            " alt="Front-End Development">
+                                <h3>Front-End Development</h3>
+                                </input>
+                            </div>
+                        </label>
+                        <div class="button_info">
+                            <div class="firstsection">Description</div>
+                            <div class="section1"></div>
+                            <button type="button" class="btn btn-lg secondsection" data-toggle="popover"
+                                title="Preffered Combinations (Front-End Development)" data-trigger="focus"
+                                data-content='<button type = "button" class = "buttonforcomb" onclick="combine.apply(null, [`Front-End Development`,`HCI/UX`,`Computer Science Foundations`])" >
+                            <div class="smallboxinbutton">Front-End Development</div>
+                            <h6>&nbsp; + &nbsp;</h6>
+                            <div class="smallboxinbutton">HCI/UX</div>
+                            <h6>&nbsp; + &nbsp;</h6>
+                            <div class="smallboxinbutton">Computer Science Foundations</div>
+                        </button>' data-html="true" data-placement="bottom">Combinations</button>
+                        </div>
+                        <div class="description">
+                            <span class="cross">&#10006;</span>
+                            <h7>
+                                In Digital Content Management, students gain first-hand experience working with a
+                                variety of enterprise content management systems, and addressing real-world digital
+                                content management challenges through a capstone experience. For more <a
+                                    href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/digitalcontentmanagement/index.html"
+                                    target="_blank" rel="noopener noreferrer">Information</a>
+                            </h7>
+
+                        </div>
+                    </div>
+
+                    <div class="subdiv" name="Health Informatics" id="11">
+                        <label>
+                            <div class="buttons"><input type="checkbox" name="checkbox">
+                                <img src="https://source.unsplash.com/400x300/weekly?biology
+                            " alt="Health Informatics">
+                                <h3>Health Informatics</h3>
+                                </input>
+                            </div>
+                        </label>
+                        <div class="button_info">
+                            <div class="firstsection">Description</div>
+                            <div class="section1"></div>
+                            <button type="button" class="btn btn-lg secondsection" data-toggle="popover"
+                                title="Preffered Combinations (Health Informatics)" data-trigger="focus" data-content='<button type = "button" class = "buttonforcomb" onclick="combine.apply(null, [`Health Informatics`,`Computer Science Foundations`])" >
+                            <div class="smallboxinbutton">Health Informatics</div>
+                            <h6>&nbsp; + &nbsp;</h6>
+                            <div class="smallboxinbutton">Computer Science Foundations</div>
+                        </button>' data-html="true" data-placement="bottom">Combinations</button>
+                        </div>
+                        <div class="description">
+                            <span class="cross">&#10006;</span>
+                            <h7>
+                                This online certificate program is designed for working professionals who want to
+                                increase their knowledge of how health information technology can be deployed to improve
+                                health outcomes. For more <a
+                                    href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/healthcareinformaticspbc/"
+                                    target="_blank" rel="noopener noreferrer">Information</a>
+                            </h7>
+
+                        </div>
+                    </div>
+
+
+                    <div class="subdiv" name="Community-based Librarianship" id="12">
+                        <label>
+                            <div class="buttons"><input type="checkbox" name="checkbox">
+                                <img src="https://source.unsplash.com/400x300/weekly?Librarian"
+                                    alt="Community-based Librarianship">
+                                <h3 class="smallerh3">Community-based Librarianship</h3>
+                                </input>
+                            </div>
+                        </label>
+                        <div class="button_info">
+                            <div class="firstsection">Description</div>
+                            <div class="section1"></div>
+
+                            <button type="button" class="btn btn-lg secondsection" data-toggle="popover"
+                                title="Preffered Combinations (Community-based Librarianship)" data-trigger="focus"
+                                data-content='<button type = "button" class = "buttonforcomb" onclick="combine.apply(null, [`Community-based Librarianship`,`HCI/UX`])" >
+                            <div class="smallboxinbutton">Community-based Librarianship</div>
+                            <h6>&nbsp; + &nbsp;</h6>
+                            <div class="smallboxinbutton">HCI/UX</div>                                
+                        </button>' data-html="true" data-placement="bottom">Combinations</button>
+                        </div>
+
+                        <div class="description">
+                            <span class="cross">&#10006;</span>
+                            <h7>
+                                The post-baccalaureate certificate program in Community-based Librarianship accepts
+                                applicants who hold a bachelor’s degree. It provides an intellectual foundation and
+                                fundamental practical skills for paraprofessionals and professionals interested in user
+                                and community engagement and services, information and data services, digital technology
+                                services, and  and academic librarianship. The certificate program may also serve
+                                as an on-ramp to a Master of Science in Information Library and Information Science
+                                graduate major (an ALA accredited program) if completed with acceptable grade
+                                requirements. For more <a
+                                    href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/communitybasedlibrarianshippbc/index.html"
+                                    target="_blank" rel="noopener noreferrer">Information</a>
+                            </h7>
+
+                        </div>
+                    </div>
+
+                    <div class="subdiv" name="Applied Data Science" id="13">
+                        <label>
+                            <div class="buttons"><input type="checkbox" name="checkbox">
+                                <img src="https://source.unsplash.com/400x300/weekly?Data
+                            " alt="Applied Data Science">
+                                <h3>Applied Data Science</h3>
+                                </input>
+                            </div>
+                        </label>
+                        <div class="button_info">
+                            <div class="firstsection">Description</div>
+                            <div class="section1"></div>
+
+                            <button type="button" class="btn btn-lg secondsection" data-toggle="popover"
+                                title="Preffered Combinations (Applied Data Science)" data-trigger="focus" data-content='<button type = "button" class = "buttonforcomb" onclick="combine.apply(null, [`Applied Data Science`,`Foundations of Data Science`,`Artificial Intelligence/Machine Learning`])" >
+                            <div class="smallboxinbutton">Applied Data Science</div>
+                            <h6>&nbsp; + &nbsp;</h6>
+                            <div class="smallboxinbutton">Foundations of Data Science</div>                                
+                            <h6>&nbsp; + &nbsp;</h6>
+                            <div class="smallboxinbutton">Artificial Intelligence/Machine Learning</div>                                
+                        </button>' data-html="true" data-placement="bottom">Combinations</button>
+                        </div>
+
+                        <div class="description">
+                            <span class="cross">&#10006;</span>
+                            <h7>
+                                The post-baccalaureate certificate provides a strong foundation in data science with a
+                                focus on the techniques and methods for data analysis and real-world problem solving.
+                                The certificate program may also count towards part of the Master of Science in Data
+                                Science if completed with predetermined grade requirements. For more <a
+                                    href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/applieddatasciencepbc/index.html"
+                                    target="_blank" rel="noopener noreferrer">Information</a>
+                            </h7>
+
+                        </div>
+                    </div>
+
+                    <div class="subdiv" name="App Development" id="14">
+                        <label>
+                            <div class="buttons"><input type="checkbox" name="checkbox">
+                                <img src="https://source.unsplash.com/400x300/weekly?App
+                            " alt="Applied Data Science">
+                                <h3>App Development</h3>
+                                </input>
+                            </div>
+                        </label>
+                        <div class="button_info">
+                            <div class="firstsection">Description</div>
+                            <div class="section1"></div>
+
+                            <button type="button" class="btn btn-lg secondsection" data-toggle="popover"
+                                title="Preffered Combinations (App Development)" data-trigger="focus" data-content='<button type = "button" class = "buttonforcomb" onclick="combine.apply(null, [`App Development`,`HCI/UX`,`Front-End Development`])" >
+                            <div class="smallboxinbutton">App Development</div>                      
+                            <h6>&nbsp; + &nbsp;</h6>
+                            <div class="smallboxinbutton">HCI/UX</div>                                
+                            <h6>&nbsp; + &nbsp;</h6>
+                            <div class="smallboxinbutton">Front-End Development</div>                                
+                        </button>' data-html="true" data-placement="bottom">Combinations</button>
+                        </div>
+
+                        <div class="description">
+                            <span class="cross">&#10006;</span>
+                            <h7>
+                                The App Development certificate provides an immersive experience to the user in the
+                                field of app making and developing. For more <a
+                                    href="https://www.ibm.com/in-en/services/applications/development?p1=Search&p4=43700057189911016&p5=b&cm_mmc=Search_Google-_-1S_1S-_-AS_IN-_-%2Bapplication%20%2Bdevelopment_b&cm_mmca7=71700000072587733&cm_mmca8=kwd-18578398450&cm_mmca9=EAIaIQobChMIwMb7k4Lz7QIVmhsrCh0SAg-fEAAYASAAEgLgmvD_BwE&cm_mmca10=463564335259&cm_mmca11=b&gclid=EAIaIQobChMIwMb7k4Lz7QIVmhsrCh0SAg-fEAAYASAAEgLgmvD_BwE&gclsrc=aw.ds"
+                                    target="_blank" rel="noopener noreferrer">Information</a>
+                            </h7>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Certificates End Here -->
+
+            <div class="alert alert-danger" role="alert">
+                <strong>Error!</strong> &nbsp; you need to select atleast 2 certificates!
+            </div>
+
+            <div class="alert alert-info" role="alert" id="alert-info">
+                <strong>Wow!</strong> &nbsp; you can select atmost 3 certificates!
+            </div>
+
+            <h4 id="boxheading">Your Picks</h4>
+            <h5 id="ins">Click on the certificate to remove</h5>
+            <div class="box" id="mixbox" onmouseover="box_change()" onmouseout="box_change2()">
+                <div id="scanner"></div>
+                <div id="upperteeth"></div>
+
+                <div id="201" class="buttons mixboxboxes"></div>
+
+                <div id="202" class="buttons mixboxboxes"></div>
+
+                <div id="203" class="buttons mixboxboxes">
+                    <h5 id="hinmixbox">Pick Something!</h5>
+                </div>
+                <div id="bottomteeth"></div>
+            </div>
+            <button id="submit" type="button" class="btn btn-info" onclick="submitting()">Generate Degree</button>
+
+        </form>
+
+
+    </section>
+
+
+    <section id="listofdegrees">
+        <div id="he">
+            <h1>Master's Degrees at Drexel CCI</h1>
+            <div class="buttoning">
+                <button type="button" class="btn btn-dark" id="openall">Open All</button>
+                <button type="button" class="btn btn-dark" id="collapseall">Collapse All</button>
+            </div>
+        </div>
+        <ul id="deg">
+            <li class="deg_acc">
+                <button class="deg_but" type="button">
+                    Master of Science in Information - HCI/UX
+                    <i class="fa fa-plus-square-o"></i>
+                </button>
+                <div class="acc_container">
+                    Human-Computer Interaction and User Experience (HCI/UX) is a graduate major that explores creative
+                    ideas, theories, and technologies to advance students’ understanding of the complex and tightly
+                    coupled relationships between people and computing systems. The program prepares students to create
+                    and evaluate technologies that support and complement human needs and abilities in a broad range of
+                    contexts such as work, wellness, home, entertainment, and artistic expression. The HCI/UX major is
+                    part of the Master of Science in Information (MSI), which prepares students for a range of careers
+                    related to user experience research, interface design, and software development. For more
+                    information go to <a
+                        href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/humancomputerinteractionanduserexperience/index.html"
+                        target="_blank" rel="noopener noreferrer">site</a>
+
+                </div>
+            </li>
+
+            <li class="deg_acc">
+                <button class="deg_but" type="button">
+                    Master of Science in Data Science
+                    <i class="fa fa-plus-square-o"></i>
+
+                </button>
+                <div class="acc_container">
+                    The Master of Science in Data Science program provides a strong foundation in the emerging area of
+                    data science with foci on data management and accountability, visualization and communication, and
+                    computational, algorithmic, and applied processing techniques. Students gain competency in
+                    fundamental methods and techniques for data collection, management, analysis, and result
+                    interpretation. Their fundamental understanding and skills will be applied to real-world data
+                    analysis tasks through state-of-the-art technologies, tools, and platforms. For more information go
+                    to <a
+                        href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/datascience/index.html"
+                        target="_blank" rel="noopener noreferrer">site</a>
+
+                </div>
+            </li>
+            <li class="deg_acc">
+                <button class="deg_but" type="button">
+                    Master of Science in Computer Science
+                    <i class="fa fa-plus-square-o"></i>
+
+                </button>
+                <div class="acc_container">
+                    The Department of Computer Science in the College of Computing & Informatics houses research groups
+                    actively conducting research on a wide range of topics in Computer Science including artificial
+                    intelligence, algorithms, computer vision and graphics, programming languages, networks, privacy and
+                    security, high-performance computing, software engineering, computer algebra, and algorithms. The
+                    department emphasizes both interdisciplinary and applied research and is supported by major federal
+                    research grants from the National Science Foundation, Department of Defense, Department of Energy,
+                    and the National Institute of Standards and Technology, as well as by private sources. For more
+                    information go to <a
+                        href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/computerscience/"
+                        target="_blank" rel="noopener noreferrer">site</a>
+
+                </div>
+            </li>
+            <li class="deg_acc">
+                <button class="deg_but" type="button">
+                    Master of Science in Information Systems
+                    <i class="fa fa-plus-square-o"></i>
+
+                </button>
+                <div class="acc_container">
+                    The College of Computing & Informatics' Master of Science in Information Systems (MSIS) prepares
+                    students for both the technical and real-world aspects of creating and managing information systems.
+                    The program is offered both online and on campus, part-time and full-time. For more information go
+                    to <a href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/informationsystems/"
+                        target="_blank" rel="noopener noreferrer">site</a>
+
+                </div>
+            </li>
+            <li class="deg_acc">
+                <button class="deg_but" type="button">
+                    Master of Science in Health Informatics
+                    <i class="fa fa-plus-square-o"></i>
+
+                </button>
+                <div class="acc_container">
+                    The Master of Science in Health Informatics (MSHI) at the College of Computing & Informatics
+                    prepares graduates to use data, information and knowledge for scientific inquiry and problem solving
+                    to improve health outcomes. The program addresses the challenges and opportunities encountered as
+                    healthcare transforms itself into a digital, patient-centered system. The inter-disciplinary nature
+                    of the MSHI program brings clinicians and IT professionals together to analyze problems and develop
+                    solutions through the application of advanced information technology. For more information go to <a
+                        href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/healthinformatics/"
+                        target="_blank" rel="noopener noreferrer">site</a>
+
+                </div>
+            </li>
+            <li class="deg_acc">
+                <button class="deg_but" type="button">
+                    Master of Science in Artificial Intelligence and Machine Learning
+                    <i class="fa fa-plus-square-o"></i>
+
+                </button>
+                <div class="acc_container">
+                    The Master of Science in Artificial Intelligence and Machine Learning provides a strong foundation
+                    in the artificial intelligence and machine learning fields with foci on mathematical foundations,
+                    algorithms, tools, and applications as they pertain to artificial intelligence and machine learning.
+                    Students will gain competency in fundamental methods and techniques in artificial intelligence and
+                    machine learning. Their fundamental understanding will be applied to real data sets and data
+                    analysis tasks with the help of state-of-the-art technologies, tools, and platforms. The Master of
+                    Science in Artificial Intelligence and Machine Learning program culminates with a two-term capstone
+                    experience where students work on a real world or research problem using the knowledge they have
+                    gained throughout the program. For more information go to <a
+                        href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/artificialintelligenceandmachinelearning/index.html"
+                        target="_blank" rel="noopener noreferrer">site</a>
+
+                </div>
+            </li>
+            <li class="deg_acc">
+                <button class="deg_but" type="button">
+                    Master of Science in Digital Content Management
+                    <i class="fa fa-plus-square-o"></i>
+
+                </button>
+                <div class="acc_container">
+                    The Digital Content Management (DCM) major prepares students with the skills and knowledge to
+                    effectively create, manage, and leverage digital content. Students gain first-hand experience
+                    working with a variety of enterprise content management systems, and addressing real-world digital
+                    content management challenges through a capstone experience. The DCM major is part of the Master of
+                    Science in Information (MSI) that prepares students for a range of information and data-oriented
+                    professional careers with critical content management skills. For more information go to <a
+                        href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/digitalcontentmanagement/index.html"
+                        target="_blank" rel="noopener noreferrer">site</a>
+
+                </div>
+            </li>
+            <li class="deg_acc">
+                <button class="deg_but" type="button">
+                    Master of Science in Information Science
+                    <i class="fa fa-plus-square-o"></i>
+
+                </button>
+                <div class="acc_container">
+                    The College of Computing & Informatics' on-campus PhD in Information Science program prepares
+                    students to become creative, interdisciplinary researchers with foundations in information science,
+                    data science, and human-centered computing. For more information go to <a
+                        href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/informationsciencephd"
+                        target="_blank" rel="noopener noreferrer">site</a>
+
+                </div>
+            </li>
+            <li class="deg_acc">
+                <button class="deg_but" type="button">
+                    Master of Science in Library and Information Science
+                    <i class="fa fa-plus-square-o"></i>
+
+                </button>
+                <div class="acc_container">
+                    The Library and Information Science (LIS) graduate major integrates information technology,
+                    professional knowledge, and interdisciplinary, experiential learning to prepare our graduates to
+                    lead and innovate in libraries, archives, museums, and information organizations. The LIS graduate
+                    major in the MSI program is accredited by the American Library Association (ALA) since 1924, and is
+                    one of the one of the oldest continuously operating LIS graduate programs in North America. For more
+                    information go to <a
+                        href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/libraryandinformationscience/"
+                        target="_blank" rel="noopener noreferrer">site</a>
+
+                </div>
+            </li>
+            <li class="deg_acc">
+                <button class="deg_but" type="button">
+                    Master of Science in Software Engineering
+                    <i class="fa fa-plus-square-o"></i>
+
+                </button>
+                <div class="acc_container">
+                    The College of Computing & Informatics' Master of Science in Software Engineering (MSSE) program was
+                    created in response to the growing importance of software in modern society and the rapid rise in
+                    demand for professional software engineers. For more information go to <a
+                        href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/softwareengineering/"
+                        target="_blank" rel="noopener noreferrer">site</a>
+
+                </div>
+            </li>
+        </ul>
+        <hr>
+
+    </section>
+
+    <section id="constraint1">
+        <div id="c1inner">
+            <button type="button" class="btn btn-light" id="c1back">Back</button>
+            <div id="c1heading">Do you have the Technical background for ?</div>
+            <div id="c1buttons">
+                <button type="button" class="btn btn-success" id="c1yes">Yes</button>
+                <button type="button" class="btn btn-danger" id="c1no">No</button>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="constraintno1">
+        <div id="cno1inner">
+            <button type="button" class="btn btn-light" id="cno1back">Back</button>
+            <div id="cno1heading">You will have to add a CS Foundations Certificate in your mix. For more Information -
+                <a href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/computersciencecert/"
+                    target="_blank" rel="noopener noreferrer">CS Foundations Certificate</a>
+            </div>
+
+            <div id="cno1buttons">
+                <div class="subdiv2">
+                    <label>
+                        <div class="buttons2" id="CSFound" onclick="CSSelected()">
+                            <img src="https://source.unsplash.com/400x300/weekly?ComputerScience
+                            " alt="Computer Science Foundations">
+                            <h3 class="smallerh3">Computer Science Foundations</h3>
+                            </input>
+                        </div>
+                    </label>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="degree">
+        <div id="degreeinner">
+            <button type="button" class="btn btn-light" id="degreeback">Back</button>
+            <div id="degreeheading">Ranking Master's Degrees Based on your Certificates</div>
+
+            <div id="degreess">
+                <ul>
+                    <li>
+                        <button for="button" type="button" class="degreebutton">
+                            <div id="percentage1">
+                                91%
+                            </div>
+
+                            <div id="degree1" class="degree">
+                                Master of Science in Information - HCI/UX
+                            </div>
+                            <i class="fa fa-plus-square-o"></i>
+                        </button>
+                        <div class="degreecontent">Your choices - resulted in a high percentage in degree. To find out
+                            more about this degree go to </div>
+
+                    </li>
+
+                    <li>
+                        <button for="button" type="button" class="degreebutton">
+                            <div id="percentage2">
+                                91%
+                            </div>
+                            <div id="degree2" class="degree">
+                                Master of Science in Data Science
+                            </div>
+                            <i class="fa fa-plus-square-o"></i>
+
+                        </button>
+                        <div class="degreecontent"></div>
+
+                    </li>
+
+                    <li>
+                        <button for="button" type="button" class="degreebutton">
+                            <div id="percentage3">
+                                91%
+                            </div>
+                            <div id="degree3" class="degree">
+                                Master of Science in Computer Science
+                            </div>
+                            <i class="fa fa-plus-square-o"></i>
+
+                        </button>
+                        <div class="degreecontent"></div>
+
+                    </li>
+
+                    <li>
+                        <button for="button" type="button" class="degreebutton">
+                            <div id="percentage4">
+                                91%
+                            </div>
+                            <div id="degree4" class="degree">
+                                Master of Science in Information Systems
+                            </div>
+                            <i class="fa fa-plus-square-o"></i>
+
+                        </button>
+                        <div class="degreecontent"></div>
+
+                    </li>
+
+                    <li>
+                        <button for="button" type="button" class="degreebutton">
+                            <div id="percentage5">
+                                91%
+                            </div>
+                            <div id="degree5" class="degree">
+                                Master of Science in Health Informatics
+                            </div>
+                            <i class="fa fa-plus-square-o"></i>
+
+                        </button>
+                        <div class="degreecontent"></div>
+
+                    </li>
+
+                    <li>
+                        <button for="button" type="button" class="degreebutton">
+                            <div id="percentage6">
+                                91%
+                            </div>
+                            <div id="degree6" class="degree">
+                                Master of Science in Artificial Intelligence and Machine Learning
+                            </div>
+                            <i class="fa fa-plus-square-o"></i>
+
+                        </button>
+                        <div class="degreecontent"></div>
+
+                    </li>
+
+                    <li>
+                        <button for="button" type="button" class="degreebutton">
+                            <div id="percentage7">
+                                91%
+                            </div>
+                            <div id="degree7" class="degree">
+                                Master of Science in Digital Content Management
+                            </div>
+                            <i class="fa fa-plus-square-o"></i>
+
+                        </button>
+                        <div class="degreecontent"></div>
+
+                    </li>
+
+                    <li>
+                        <button for="button" type="button" class="degreebutton">
+                            <div id="percentage8">
+                                91%
+                            </div>
+                            <div id="degree8" class="degree">
+                                Master of Science in Information Science
+                            </div>
+                            <i class="fa fa-plus-square-o"></i>
+
+                        </button>
+                        <div class="degreecontent"></div>
+
+                    </li>
+
+                    <li>
+                        <button for="button" type="button" class="degreebutton">
+                            <div id="percentage9">
+                                91%
+                            </div>
+                            <div id="degree9" class="degree">
+                                Master of Science in Library and Information Science
+                            </div>
+                            <i class="fa fa-plus-square-o"></i>
+
+                        </button>
+                        <div class="degreecontent"></div>
+
+                    </li>
+
+                    <li>
+                        <button for="button" type="button" class="degreebutton">
+                            <div id="percentage10">
+                                91%
+                            </div>
+                            <div id="degree10" class="degree">
+                                Master of Science in Software Engineering
+                            </div>
+                            <i class="fa fa-plus-square-o"></i>
+
+                        </button>
+                        <div class="degreecontent"></div>
+
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="body3">
+
+        <h1>Connect with Drexel</h1>
+        <form id="contact">
+            <div class="contactcontainer">
+                <div class="contactinputBox">
+                    <input type="name" name="name" id = "name" required="required">
+                    <span>Full Name</span>
+                </div>
+
+                <div class="contactinputBox">
+                    <input type="email" name="email" id = "email" required="required">
+                    <span>Email Address</span>
+                </div>
+
+                <div class="contactinputBox">
+                    <input type="phone" name="phone" id = "phone" required="not">
+                    <span>Phone Number (Optional)</span>
+                </div>
+
+                <div class="contacttextBox">
+                    <textarea name="desc" id="textarea" cols="" rows="4" placeholder="Message (Optional)"></textarea>
+                </div>
+
+                <div class="contactinputBox">
+                    <label>
+                        <input type="checkbox" name="checkbox" id="checkit">
+                        Get updates from the university
+                    </label>
+                </div>
+                <button for="submit" class="submit" value = "Send Message">Submit</button>
+            </div>
+
+        </form>
+        <ul id="social">
+            <li>
+                <a href="https://www.facebook.com/drexeluniv/" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-facebook"></i>
+                </a>
+            </li>
+            <li><a href="https://www.instagram.com/drexeluniv/?hl=en" target="_blank" rel="noopener noreferrer"><i
+                        class="fa fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/DrexelUniv?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                    target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/user/DrexelUniv" target="_blank" rel="noopener noreferrer"><i
+                        class="fa fa-youtube"></i></a></li>
+            <li><a href="https://www.linkedin.com/school/drexel-university/" target="_blank"
+                    rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a></li>
+
+        </ul>
+
+    </section>
+
+
+    <footer>
+        <div class="footer_container">
+            <div class="footercontainer1">
+                <a href="http://drexel.edu" target="_blank" rel="noopener noreferrer">
+                    <h2>Drexel University</h2>
+                </a>
+                <a href="http://drexel.edu" target="_blank" rel="noopener noreferrer">
+                    <img src="./public/img/Drexel-logo.png" alt=""></a>
+
+            </div>
+            <h4>
+                Drexel University is a private research university with its main campus in Philadelphia, Pennsylvania.
+                It was founded in 1891 by Anthony J. Drexel, a financier and philanthropist. Founded as Drexel Institute
+                of Art, Science, and Industry, it was renamed Drexel Institute of Technology in 1936, before assuming
+                its current name in 1970. <a href="http://" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+            </h4>
+
+        </div>
+        <div class="quicklinks">
+            <h2>Quick Links</h2>
+            <ul class="quickul">
+                <li>
+                    <a href="http://drexel.edu" target="_blank" rel="noopener noreferrer" class="links">University
+                        Website</a>
+                </li>
+
+                <li>
+                    <a href="http://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/" target="_blank"
+                        rel="noopener noreferrer" class="links">CCI Catalog</a>
+                </li>
+
+                <li>
+                    <a href="http://catalog.drexel.edu/certificates/" target="_blank" rel="noopener noreferrer"
+                        class="links">Certificate Programs</a>
+                </li>
+
+                <li>
+                    <a href="http://catalog.drexel.edu/" target="_blank" rel="noopener noreferrer"
+                        class="links">2020-2021
+                        Drexel Catalog</a>
+
+                </li>
+            </ul>
+        </div>
+        <div class="location">
+            <h2>Contact Info</h2>
+            <ul class="info">
+                <li>
+                    <span><i class="fa fa-map-marker"></i></span>
+                    <span>3141 Chestnut St, Philadelphia,<br> PA 19104,<br> United States</span>
+                </li>
+                <li>
+                    <span><i class="fa fa-phone"></i></span>
+                    <span><a href="tel:+1 2158952000">+1 215-895-2000</a></span>
+                </li>
+
+            </ul>
+        </div>
+
+    </footer>
+
+    <section id="body4">
+        <h1>Looks like you have reached the end</h1>
+        <div class="fire-wrapper">
+            <img class="fire" src="https://www.stivaliserna.com/assets/rocket/fire.svg" />
+        </div>
+
+        <div class="rain rain1"></div>
+        <div class="rain rain2">
+            <div class="drop drop2"></div>
+        </div>
+        <div class="rain rain3"></div>
+        <div class="rain rain4"></div>
+        <div class="rain rain5">
+            <div class="drop drop5"></div>
+        </div>
+        <div class="rain rain6"></div>
+        <div class="rain rain7"></div>
+        <div class="rain rain8">
+            <div class="drop drop8"></div>
+        </div>
+        <div class="rain rain9"></div>
+        <div class="rain rain10"></div>
+        <div class="drop drop11"></div>
+        <div class="drop drop12"></div>
+        <div id="canvas"></div>
+    </section>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+
+<script src="./public/js/vanilla-tilt.js"></script>
+
+
+<script src="./public/js/tether.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+<!-- Scroll out script -->
+
+
+<!-- Code for the Drexel Rocket -->
+<script src="https://unpkg.com/three@0.123.0/build/three.min.js"></script>
+
+<script src="https://unpkg.com/three@0.123.0/examples/js/loaders/GLTFLoader.js"></script>
+
+<script src="./public/js/durocket.js"></script>
+
+
+
+<!-------------------------------------------------------------->
+
+
+<script src="./public/js/final.js"></script>
+
+</html>
